@@ -1,0 +1,41 @@
+<div class="container" id="cont-empleado">
+    <div>
+        <h2>Empleados</h2>
+    </div>
+    <hr>
+    <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping">Nombre:</span>
+        <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="addon-wrapping" [(ngModel)]="empleado.nombre">
+    </div>
+    <br>
+    <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping">Apellidos:</span>
+        <input type="text" class="form-control" placeholder="Apellidos" aria-label="Apellidos" aria-describedby="addon-wrapping" [(ngModel)]="empleado.apellidos">
+    </div>
+    <br>
+    <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping">Correo:</span>
+        <input type="email" class="form-control" placeholder="usuario@ejemplo.com" aria-label="email" aria-describedby="addon-wrapping" [(ngModel)]="empleado.correo">
+    </div>
+    <br>
+    <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping">Clave:</span>
+        <input type="password" class="form-control" aria-label="clave" aria-describedby="addon-wrapping" [(ngModel)]="empleado.clave">
+    </div>
+    <br>
+    <div class="input-group mb-3">
+        <label for="inputGroupSelect01" class="input-group-text">Tipo:</label>
+        <select id="inputGroupSelect01" class="form-select" [(ngModel)]="empleado.tipo">
+            <option *ngFor="let tipo of tipos" value="{{tipo.id}}">{{ tipo.nombre }}</option>
+        </select>
+    </div>
+
+    <hr>
+    <!-- Menú de Opciones -->
+    <button class="btn btn-primary" (click)="this.nuevoEmpleado()">Guardar</button>
+    <button class="btn btn-primary" >Modificar</button>
+    <hr>
+
+    <app-listado-empleados></app-listado-empleados>
+
+</div>

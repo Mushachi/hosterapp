@@ -1,0 +1,36 @@
+<div id="cont-cliente">
+    <div>
+        <h2>Clientes</h2>
+    </div>
+    <hr>
+    <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping">Nombre:</span>
+        <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="addon-wrapping" [(ngModel)]="cliente.nombre">
+    </div>
+    <br>
+    <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping">Correo:</span>
+        <input type="email" class="form-control" placeholder="usuario@ejemplo.com" aria-label="email" aria-describedby="addon-wrapping" [(ngModel)]="cliente.correo">
+    </div>
+    <br>
+    <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping">Teléfono:</span>
+        <input type="tel" class="form-control" placeholder="3322077253" aria-label="email" aria-describedby="addon-wrapping" [(ngModel)]="cliente.tel">
+    </div>
+    <br>
+    <div class="input-group mb-3">
+        <label for="inputGroupSelect01" class="input-group-text">Grupo:</label>
+        <select id="inputGroupSelect01" class="form-select" [(ngModel)]="cliente.grupo">
+            <option *ngFor="let grupo of grupos" value="{{grupo.id}}">{{ grupo.nombre }}</option>
+        </select>
+    </div>
+
+    <hr>
+    <!-- Menú de Opciones -->
+    <button class="btn btn-primary" (click)="this.nuevoCliente()">Guardar</button>
+    <button class="btn btn-primary" >Modificar</button>
+    <hr>
+
+    <app-listado-clientes></app-listado-clientes>
+
+</div>

@@ -1,0 +1,29 @@
+<!-- cabe recalcar que se está usando etiquetas html 5 
+header con la clase cabecera-barra principal contiene toda la cabecera -->
+<header class="cabecera-barra">
+
+    <!-- cabecera 1 con sus elementos  -->
+    <div class="cabecera-barra-1">
+
+        <!-- separador con un ancho maximo de 1200px véase css -->
+        <div class="cabecera-separador">
+
+            <h1><button>Logo<span>web</span></button></h1>
+            
+            <!-- etiqueta nav de html5  -->
+            <nav>
+                <!-- <mat-icon (click)="openNav()">reorder</mat-icon> -->
+                <!-- <span style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776;</span> -->
+                <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+                <!-- enlace con clase activo para diferenciar en donde se encuentra el usuario -->
+                <a mat-button>Programas</a>
+                <a href="#">Reportes</a>
+                <a href="#">Elementos</a>
+                <mat-icon routerLink="login">perm_identity</mat-icon>
+            </nav>
+
+        </div>
+
+    </div>
+
+</header>

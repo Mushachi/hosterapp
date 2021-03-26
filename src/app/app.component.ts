@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'hosterapp';
+
+
+// cambiarTitulo(){
+//   let titulo: HTMLHeadingElement = document.getElementById("titulo") as HTMLHeadingElement;
+
+//   titulo.innerText = "Hola: Julio";
+// }
+
 }
